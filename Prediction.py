@@ -64,7 +64,7 @@ def load_and_predict(img,IsWeather=True):
     weights = f'model_weights_{pred_type}.pth' if IsWeather else f'model_weights_{pred_type}.pt'
 
     Pmodel.load_state_dict(torch.load(weights,map_location=torch.device('cpu'))) # модель и веса
-    st.write(type(torch.load(weights,map_location=torch.device('cpu'))))
+    #st.write(type(torch.load(weights,map_location=torch.device('cpu'))))
 
     Pmodel.eval()
 
@@ -72,7 +72,7 @@ def load_and_predict(img,IsWeather=True):
         class_to_idx = pkl.load(file)
         class_to_idx = {value:key for key,value in class_to_idx.items()}
 
-    st.write(class_to_idx)
+    #st.write(class_to_idx)
 
     class GrayToRGB(object):
         def __call__(self, img):
