@@ -6,7 +6,7 @@ with open('hist_weather.pkl', 'rb') as file: # словарь оценок дл�
         hist_dict = pkl.load(file)
 
 st.write("# Метрики и графики модели предсказания погоды")
-st.write(f'Accuracy train: {hist_dict['train_accs'][-1]:.4f}, Accuracy valid: {hist_dict['valid_accs'][-1]:.4f}')
+st.write(f'Accuracy train: {hist_dict["train_accs"][-1]:.4f}, Accuracy valid: {hist_dict["valid_accs"][-1]:.4f}')
 
 # зададим функцию рисования графиков
 def plot_history(history, grid=True):
